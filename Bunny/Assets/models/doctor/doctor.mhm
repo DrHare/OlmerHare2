@@ -1,0 +1,48 @@
+# Written by MakeHuman 1.0.2
+version v1.0.2
+tags doctor
+face r-cheek-bones-in-out 0.612000
+face nose-width1-min-max -0.032000
+face chin-bones-in-out -1.000000
+face nose-scale-depth-incr-decr -0.742000
+face nose-scale-horiz-incr-decr 0.822000
+face neck-scale-depth-less-more -1.000000
+face l-cheek-volume-deflate-inflate -0.258000
+face neck-scale-horiz-less-more -1.000000
+face r-cheek-trans-vert-down-up -1.000000
+face head-age-less-more -1.000000
+face chin-prognathism-less-more 0.210000
+face chin-prominent-less-more 0.630000
+face l-cheek-bones-in-out -1.000000
+face head-angle-in-out 0.146000
+face nose-nostril-width-min-max 0.758000
+face nose-height-min-max 0.564000
+face chin-height-min-max 0.388000
+face r-cheek-volume-deflate-inflate -0.178000
+face chin-width-min-max 0.226000
+face head-invertedtriangular 0.605000
+face nose-trans-vert-up-down 0.678000
+face l-cheek-trans-vert-down-up -1.000000
+torso hip-scale-horiz-decr-incr -0.742000
+torso torso-scale-horiz-decr-incr -0.758000
+eyes HighPolyEyes 2c12f43b-1303-432c-b7ce-d78346baf2e6
+clothesHideFaces True
+armslegs r-upperleg-scale-vert-decr-incr -1.000000
+armslegs l-upperleg-scale-vert-decr-incr -1.000000
+armslegs l-upperleg-scale-horiz-decr-incr -0.210000
+armslegs r-upperleg-scale-horiz-decr-incr -0.210000
+gendered BreastFirmness 0.427000
+gendered BreastSize 0.500000
+macro Weight 0.492000
+macro Gender 1.000000
+macro Age 1.000000
+macro Height 0.484000
+macro Asian 0.000000
+macro African 0.000000
+macro Caucasian 1.000000
+macro Muscle 1.000000
+macro BodyProportions 1.000000
+background enabled False
+skinMaterial skins/default.mhmat
+material HighPolyEyes 2c12f43b-1303-432c-b7ce-d78346baf2e6 eyes/materials/brown.mhmat
+subdivide False

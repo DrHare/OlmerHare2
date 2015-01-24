@@ -39,10 +39,10 @@
 	<Reference Include="System.Core" />
 	<Reference Include="System.Xml.Linq" />
 	<Reference Include="UnityEngine">
-	  <HintPath>C:/Program Files (x86)/Unity/Editor/Data/Managed/UnityEngine.dll</HintPath>
+	  <HintPath>C:/Program Files (x86)/Unity4.6.1f1/Editor/Data/Managed/UnityEngine.dll</HintPath>
 	</Reference>
 	<Reference Include="UnityEditor">
-	  <HintPath>C:/Program Files (x86)/Unity/Editor/Data/Managed/UnityEditor.dll</HintPath>
+	  <HintPath>C:/Program Files (x86)/Unity4.6.1f1/Editor/Data/Managed/UnityEditor.dll</HintPath>
 	</Reference>
   </ItemGroup>
   <ItemGroup>
@@ -244,7 +244,6 @@
      <Compile Include="Assets\Apex\Apex Path\Scripts\WorldGeometry\PortalType.cs" />
      <Compile Include="Assets\Apex\Apex Path\Scripts\WorldGeometry\TerrainHeightMap.cs" />
      <Compile Include="Assets\Apex\Apex Path\Scripts\WorldGeometry\ZeroHeightMap.cs" />
-     <Compile Include="Assets\ApexMecanim\Complete\MecanimMoverComponentComplete.cs" />
      <Compile Include="Assets\DarkTonic\CoreGameKit\ExampleScenes\Scripts\KW_Enemy.cs" />
      <Compile Include="Assets\DarkTonic\CoreGameKit\ExampleScenes\Scripts\KW_Fighter1.cs" />
      <Compile Include="Assets\DarkTonic\CoreGameKit\ExampleScenes\Scripts\KW_Fighter2.cs" />
@@ -313,14 +312,46 @@
      <Compile Include="Assets\DarkTonic\CoreGameKit\Scripts\WorldVariables\WorldVariableRange.cs" />
      <Compile Include="Assets\DarkTonic\CoreGameKit\Scripts\WorldVariables\WorldVariableRangeCollection.cs" />
      <Compile Include="Assets\DarkTonic\CoreGameKit\Scripts\WorldVariables\WorldVariableTracker.cs" />
+     <Compile Include="Assets\Scripts\Animation\Escape\DelayedDeactivation.cs" />
+     <Compile Include="Assets\Scripts\Animation\Escape\Eject.cs" />
+     <Compile Include="Assets\Scripts\Animation\Escape\TheGreatActivator.cs" />
+     <Compile Include="Assets\Scripts\Fx\GlowPlaneOrient.cs" />
+     <Compile Include="Assets\Scripts\Fx\ReflectionFx.cs" />
+     <Compile Include="Assets\Scripts\Misc\DemoControl.cs" />
+     <Compile Include="Assets\Scripts\Misc\GameOverGUI.cs" />
+     <Compile Include="Assets\Scripts\Misc\InitLevelManager.cs" />
      <Compile Include="Assets\Scripts\PlayerMovement.cs" />
+     <None Include="Assets\Shaders\Fx\Cursor.shader" />
+     <None Include="Assets\Shaders\Fx\Additive.shader" />
+     <None Include="Assets\Shaders\BackgroundAndCharacters\ReflectiveBackgroundSelfIllumination.shader" />
      <None Include="Assets\Apex\Apex Path\ChangeLog.txt" />
+     <None Include="Assets\Resources\HeightDepthOfField.shader" />
+     <None Include="Assets\Resources\BlurPassesForDof.shader" />
+     <None Include="Assets\Standard assets\Particles\Sources\Shaders\Particle Alpha Blend (Queue +100).shader" />
+     <None Include="Assets\Shaders\Fx\ScreenRefract.shader" />
+     <None Include="Assets\Shaders\BackgroundAndCharacters\Fallback.shader" />
+     <None Include="Assets\Shaders\Fx\Multiply.shader" />
      <None Include="Assets\DarkTonic\CoreGameKit\ReleaseNotes.txt" />
+     <None Include="Assets\Shaders\BackgroundAndCharacters\CharacterSelfIlluminationReflective.shader" />
+     <None Include="Assets\Resources\ColoredNoise.shader" />
+     <None Include="Assets\Shaders\BackgroundAndCharacters\PlanarRealtimeReflection.shader" />
+     <None Include="Assets\Shaders\BackgroundAndCharacters\ReflectiveBackgroundPlanar.shader" />
+     <None Include="Assets\Resources\MobileBloom.shader" />
+     <None Include="Assets\Shaders\Fx\ParticleAdditive.shader" />
      <None Include="Assets\Apex\Apex Path\Getting Started.txt" />
+     <None Include="Assets\Shaders\Fx\LaserScope.shader" />
+     <None Include="Assets\Shaders\BackgroundAndCharacters\SuperSimpleSelfIllumination.shader" />
      <None Include="Assets\Apex\Apex Path Examples and Documentation\Apex Path Examples and Tutorials Project Setup.txt" />
+     <None Include="Assets\Shaders\Fx\ParticleBlend.shader" />
  <Reference Include="UnityEngine.UI">
- <HintPath>C:/Program Files (x86)/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/4.6.1/UnityEngine.UI.dll</HintPath>
+ <HintPath>C:/Program Files (x86)/Unity4.6.1f1/Editor/Data/UnityExtensions/Unity/GUISystem/4.6.1/UnityEngine.UI.dll</HintPath>
  </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="Assembly-CSharp-firstpass.csproj">
+      <Project>{30F1D646-6535-A7A3-9DCB-18B4A021AA11}</Project>      <Name>Assembly-CSharp-firstpass</Name>    </ProjectReference>
+    <ProjectReference Include="Assembly-UnityScript-firstpass.unityproj">
+      <Project>{EB5A969D-D0EB-9A35-BD84-5AC4CA1F3C77}</Project>      <Name>Assembly-UnityScript-firstpass</Name>    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

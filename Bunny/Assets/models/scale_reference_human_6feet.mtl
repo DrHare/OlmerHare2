@@ -1,0 +1,14 @@
+newmtl Bunny_place_holder_model_Rev1:wire_140088225
+illum 4
+Kd 0.55 0.35 0.88
+Ka 0.55 0.35 0.88
+Tf 1.00 1.00 1.00
+Ni 1.00
+Ks 0.35 0.35 0.35
+Ns 32.00
+newmtl initialShadingGroup
+illum 4
+Kd 0.50 0.50 0.50
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+Ni 1.00
