@@ -1,0 +1,97 @@
+﻿<#@ template debug="false" hostspecific="false" language="C#" #>
+<#@ assembly name="System.Core" #>
+<#@ assembly name="$(SolutionDir)\Library\UnityAssemblies\UnityEngine.dll" #>
+<#@ assembly name="$(SolutionDir)\obj\Debug\Assembly-CSharp.dll" #>
+<#@ import namespace="System.Linq" #>
+<#@ import namespace="System.Text" #>
+<#@ import namespace="System.Collections.Generic" #>
+<#@ import namespace="Apex.Steering" #>
+<#@ import namespace="Apex.Steering.Components" #>
+<#@ import namespace="Apex.WorldGeometry" #>
+<#@ import namespace="Apex.PathFinding" #>
+<#@ import namespace="Microsoft.CSharp" #>
+<#@ output extension=".txt" #>
+
+<#
+    Type type = null;
+    type = typeof(PathServiceComponent);
+
+    if(type == null)
+    {
+        return string.Empty;
+    }
+#>
+namespace Apex.Editor
+{
+    using UnityEditor;
+    using UnityEngine;
+
+    [CustomEditor(typeof(<#=type.Name #>), false), CanEditMultipleObjects]
+    public class <#=type.Name #>Editor : Editor
+    {
+<#
+    var props = type.GetFields();
+    foreach(var p in props)
+    {
+#>
+        private SerializedProperty _<#=p.Name #>;
+<#
+    }
+#>
+        public override void OnInspectorGUI()
+        {
+            if (Application.isPlaying)
+            {
+                EditorGUILayout.HelpBox("These settings cannot be edited in play mode.", MessageType.Info);
+                return;
+            }
+
+            this.serializedObject.Update();
+<#
+    foreach(var p in props)
+    {
+#>
+            EditorGUILayout.PropertyField(_<#=p.Name #>, new GUIContent("<#=SplitToWords(p.Name) #>", ""));
+<#
+    }
+#>
+            this.serializedObject.ApplyModifiedProperties();
+        }
+
+        private void OnEnable()
+        {
+<#
+    foreach(var p in props)
+    {
+#>
+            _<#=p.Name #> = this.serializedObject.FindProperty("<#=p.Name #>");
+<#
+    }
+#>
+        }
+    }
+}
+<#+
+        private static string SplitToWords(string s)
+        {
+            if (string.IsNullOrEmpty(s))
+            {
+                return s;
+            }
+
+            var transformer = new StringBuilder();
+
+            transformer.Append(char.ToUpper(s[0]));
+            for (int i = 1; i < s.Length; i++)
+            {
+                if (char.IsUpper(s, i))
+                {
+                    transformer.Append(" ");
+                }
+
+                transformer.Append(s[i]);
+            }
+
+            return transformer.ToString();
+        }
+#>
